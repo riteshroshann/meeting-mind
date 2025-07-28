@@ -1,0 +1,14 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+startCommand = "gunicorn --bind 0.0.0.0:$PORT --workers 2 --timeout 120 meeting_assistant.wsgi:application"
+healthcheckPath = "/api/health/"
+healthcheckTimeout = 300
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
+
+[env]
+DJANGO_SECRET_KEY = { generate = true }
+DEBUG = "False"
