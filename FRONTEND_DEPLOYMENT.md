@@ -3,19 +3,33 @@
 ## Files to Upload to Git Repository
 
 ### ✅ Include These Files/Folders:
+```
+app/                       # Next.js App Router pages
+components/                # React components
+lib/                      # Utility functions
+public/                   # Static assets
+hooks/                    # React hooks
+styles/                   # CSS styles
+package.json              # Dependencies
+next.config.mjs           # Next.js configuration
+tailwind.config.ts        # Tailwind CSS config
+tsconfig.json             # TypeScript config
+.env.example              # Environment template
+.gitignore                # Git ignore rules
+README.md                 # Documentation
+```
 \`\`\`
-frontend/                    # Main Next.js application
-├── app/                    # Next.js App Router pages
-├── components/             # React components
-├── lib/                   # Utility functions
-├── public/                # Static assets
-├── package.json           # Dependencies
-├── next.config.mjs        # Next.js configuration
-├── tailwind.config.ts     # Tailwind CSS config
-├── tsconfig.json          # TypeScript config
-├── .env.example           # Environment template
-├── .gitignore             # Git ignore rules
-└── README.md              # Documentation
+```
+ai-meeting-assistant/
+├── app/              # Next.js application (Vercel will use this)
+├── components/       # React components
+├── backend/          # Django backend (deploy separately to Render)
+└── package.json      # Dependencies
+```
+
+## Key Points
+- No need to set root directory in Vercel (project is at root level)
+- Only one environment variable needed: `NEXT_PUBLIC_BACKEND_URL`
 
 # Root level files (optional but recommended)
 README.md                   # Project overview
@@ -42,10 +56,10 @@ node_modules/              # Dependencies (auto-installed)
 
 ### Step 2: Deploy to Vercel
 1. Connect GitHub repository to Vercel
-2. Set **Root Directory** to `frontend/`
-3. Add environment variable:
+2. Set **Root Directory** to `/` (root)
+3. Add **Environment Variable**:
    \`\`\`
-   NEXT_PUBLIC_BACKEND_URL=https://backened-baby-one.onrender.com
+   NEXT_PUBLIC_BACKEND_URL=https://backened-baby-one-1-6ooz.onrender.com
    \`\`\`
 4. Deploy
 

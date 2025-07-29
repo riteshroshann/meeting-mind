@@ -1,6 +1,20 @@
 # MeetingMind - AI-Powered Meeting Assistant
 
-A full-stack application that transforms audio recordings into actionable meeting insights using AI.
+A full-stack app### Option 1: Frontend Only (Use Existing Backend)
+Deploy just the frontend to work with your existing backend:
+
+1. **Upload to GitHub:**
+   ```bash
+   git add .
+   git commit -m "Add MeetingMind frontend"
+   git push origin main
+   ```
+
+2. **Deploy to Vercel:**
+   - Connect GitHub repository
+   - No need to set root directory (project is at root level)
+   - Add environment variable: `NEXT_PUBLIC_BACKEND_URL=https://backened-baby-one-1-6ooz.onrender.com`
+   - Deployransforms audio recordings into actionable meeting insights using AI.
 
 ## Overview
 
@@ -41,7 +55,6 @@ Frontend (Next.js)  →  Backend (Django)  →  AI Services
 
 ### Frontend Setup
 \`\`\`bash
-cd frontend
 npm install
 cp .env.example .env.local
 # Edit .env.local with your backend URL
@@ -87,28 +100,20 @@ Deploy both frontend and backend:
 
 2. **Frontend to Vercel:**
    - Connect same GitHub repository
-   - Set root directory to `frontend/`
+   - No need to set root directory (project is at root level)
    - Add environment variable with new backend URL
    - Deploy
 
 ## Project Structure
 
 \`\`\`
+```
 meetingmind/
-├── frontend/              # Next.js application
-│   ├── app/              # App router pages
-│   ├── components/       # React components
-│   ├── lib/              # Utilities
-│   ├── public/           # Static assets
-│   ├── package.json      # Dependencies
-│   └── .env.example      # Environment template
-├── backend/              # Django application
-│   ├── meeting_assistant/ # Django project
-│   ├── api/              # API endpoints
-│   ├── requirements.txt  # Python dependencies
-│   └── .env.example      # Environment template
-├── README.md             # This file
-└── .gitignore           # Git ignore rules
+├── app/                  # Next.js app router pages
+├── components/           # React components
+├── backend/              # Django backend (separate deployment)
+└── ...
+```
 \`\`\`
 
 ## Features

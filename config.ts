@@ -3,7 +3,7 @@
 export const config = {
   // API Configuration
   api: {
-    baseUrl: process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:8000",
+    baseUrl: process.env.NEXT_PUBLIC_BACKEND_URL || "https://backened-baby-one-1-6ooz.onrender.com",
     endpoints: {
       processAudio: "/api/process-audio/",
       testConnection: "/api/test-connection/",

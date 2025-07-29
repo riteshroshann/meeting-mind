@@ -96,7 +96,7 @@ function audioBufferToWav(buffer: AudioBuffer): Blob {
   return new Blob([view.buffer], { type: "audio/wav" })
 }
 
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "https://backened-baby-one.onrender.com"
+const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "https://backened-baby-one-1-6ooz.onrender.com"
 
 export default function SessionsPage() {
   const [stage, setStage] = useState<ProcessingStage>("upload")
