@@ -10,14 +10,6 @@ const nextConfig = {
     domains: ['localhost'],
     unoptimized: true,
   },
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/:path*`,
-      },
-    ];
-  },
   async headers() {
     return [
       {
@@ -31,6 +23,6 @@ const nextConfig = {
       },
     ];
   },
-};
+}
 
-export default nextConfig;
+export default nextConfig
